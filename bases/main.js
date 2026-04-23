@@ -4,11 +4,22 @@
         constructor(name, realName) {
             this.name = name;
             this.realName = realName;
-            console.log('Constructor de Mutante');
         }
     }
-    const wolverine = new Mutante('Wolverine', 'Logan');
-    console.log(wolverine);
+    class Xmen extends Mutante {
+        salvarMundo() {
+            return 'Mundo a salvo!';
+        }
+    }
+    class Villain extends Mutante {
+        conquistarMundo() {
+            return 'Mundo conquistado!';
+        }
+    }
+    const wolverine = new Xmen('Wolverine', 'Logan');
+    const magneto = new Villain('Magneto', 'Magnus');
+    console.log(wolverine.salvarMundo());
+    console.log(magneto.conquistarMundo());
 })();
 (() => {
     class Avenger {

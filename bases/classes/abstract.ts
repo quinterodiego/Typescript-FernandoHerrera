@@ -3,11 +3,23 @@
     constructor(
       public name: string,
       public realName: string
-    ) {
-      console.log('Constructor de Mutante');
+    ) {}
+  }
+
+  class Xmen extends Mutante {
+    salvarMundo() {
+      return 'Mundo a salvo!'
     }
   }
 
-  const wolverine = new Mutante('Wolverine', 'Logan');
-  console.log(wolverine);
+  class Villain extends Mutante {
+    conquistarMundo() {
+      return 'Mundo conquistado!'
+    }
+  }
+
+  const wolverine = new Xmen('Wolverine', 'Logan');
+  const magneto = new Villain('Magneto', 'Magnus');
+  console.log(wolverine.salvarMundo());
+  console.log(magneto.conquistarMundo());
 })();
