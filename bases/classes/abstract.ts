@@ -20,6 +20,12 @@
 
   const wolverine = new Xmen('Wolverine', 'Logan');
   const magneto = new Villain('Magneto', 'Magnus');
-  console.log(wolverine.salvarMundo());
-  console.log(magneto.conquistarMundo());
+  // console.log(wolverine.salvarMundo());
+  // console.log(magneto.conquistarMundo());
+
+  const printName = (character: Mutante) => {
+    console.log(character.realName)
+  }
+
+  // printName(magneto);
 })();
