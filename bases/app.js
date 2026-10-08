@@ -1,2 +1,5 @@
-var message = 'Hola Mundo';
-console.log(message);
+"use strict";
+(() => {
+    const a = 10;
+    console.log(a);
+})();
